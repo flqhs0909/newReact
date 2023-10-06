@@ -1,0 +1,51 @@
+
+
+.main_container{
+	position: relative;
+	background-image: url(../../public/image/main01.png) ;
+	background-repeat: no-repeat; 
+	height: 1000px;
+}
+/* header { color: #1a2d66;} */
+header:hover{background-color: #fff; border-bottom: 1px solid var(--gray02);}
+header .header_container{height: 100%; width:1790px;}
+header .header_container .header_inner{
+	height: 100%;
+	display: flex;
+	margin: 0 80px;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+header .header_container .header_inner h1{height: 108px; cursor: pointer;}
+header .header_container .header_inner h1 a{ display:block; height: 100%;}
+header .header_container .header_inner h1 a img{ margin: 30px 0;}
+
+header .header_container nav{height: 108px;}
+header .header_container nav .main_menu {
+	
+	width: 500px;
+	display: flex; 
+	/* justify-content: space-between; */
+	align-items: center;
+}
+
+header .header_container nav .main_menu > li{ position: relative; width: calc(100% / 4); }
+header .header_container nav .main_menu > li > a { display: block; width: 100%; line-height: 108px; text-align: center;text-decoration: none; color:var(--main-color); font-size: 18px; font-weight: bold;}
+header .header_container nav .main_menu > li a::after {content: ""; display: none; position: absolute; z-index: 10; width: 100%; height: 2px; background-color: #1a2d66; }
+header .header_container nav .main_menu > li:hover > a::after{border-bottom: 2px solid var(--main-color) ; display: block;}
+header .header_container nav .main_menu .sub_menu{ width: 100%;  position: absolute; z-index: 4; border-width: 1px solid var(--gray01); padding-top: 32px;  }
+header .header_container nav .main_menu .sub_menu li {width: 100%;height: 28px; line-height: 28px; margin-bottom: 10px; font-size: 24px; }
+header .header_container nav .main_menu .sub_menu li a{height: 100%; display: block; ; color: var(--gray01); text-align: center;  font-size: 16px;}
+header .header_container nav .main_menu .sub_menu li a:hover{color: var(--main-color);}
+header .header_container nav:hover .sub_menu{ display: block; transition: all 2s ease-out;}
+header .header_container nav .sub_bg{display: none; position: absolute;top: 109px;left: 0; width: 100%; height: 200px; background-color: #fff; border-bottom: 1px solid var(--gray02); z-index: 3;}
+header .header_container nav:hover .sub_bg{display: block;}
+
+
+
+.main_tBox{height: 284px; width: 50%; color:var(--main-color); background-color: #fff; position: absolute; bottom: 0;
+}
+.main_tBox p{width: 450px;  font-size: 80px;line-height: 1.2; font-weight: bold; text-transform:uppercase ; overflow-wrap: break-word; text-align: right; position: absolute; top: -58%; right: 90px;}
+.main_tBox span{ font-size:26px; position: absolute; bottom: 0;right: 90px; font-family:'Noto Sans KR'; font-weight: bold;}
