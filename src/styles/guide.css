@@ -1,6 +1,23 @@
 :root{ 
-	
+	/* 변수 사용해 컬러 값 사용해보기  */
 	--main-color: #1a2d66;
 	--gray01: #969696;
 	--gray02: #dcdcdc;
+
+
+	/* --font-family: "Poppins ,  sans-serif" */
 }
+
+
+
+
+.bg_gray{ background-color: #f1f2f3;}
+/* .font-family{font-family:;} */
+
+.wdith1790{width: 93.22916666667%;}
+.width1200{width: 62.5%;}
+.width800{width: 41.66666666667%;}
+
+.btn_rink{display: flex;width: fit-content;  align-items: center; background-color: var(--main-color);  border-radius: 100px; border: none; padding: 16px 25px; }
+.btn_rink b{ font-size: 14px; color: #fff; margin-right: 32px; }
+

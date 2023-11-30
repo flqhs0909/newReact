@@ -1,0 +1,82 @@
+
+
+
+/* header start */
+
+/* header { color: #1a2d66;} */
+header{ width: 100%; background: none; position: absolute;z-index: 999;}
+header:hover{background-color: #fff; border-bottom: 1px solid var(--gray02);}
+header .header_container{height: 100%; }
+header .header_container .header_inner{
+	height: 100%;
+	display: flex;
+	
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+header .header_container .header_inner h1{height: 108px; cursor: pointer;margin-left: 80px;}
+header .header_container .header_inner h1 a{ display:block; height: 100%;}
+header .header_container .header_inner h1 a img{ margin: 30px 0;}
+
+header .header_container nav{height: 108px;}
+header .header_container nav .main_menu {
+	
+	width: 500px;
+	display: flex; 
+	/* justify-content: space-between; */
+	align-items: center;
+}
+
+header .header_container nav .main_menu > li{ position: relative; width: calc(100% / 4); }
+header .header_container nav .main_menu > li > a { display: block; width: 100%; line-height: 108px; text-align: center;text-decoration: none; color:var(--main-color); font-size: 18px; font-weight: bold;}
+header .header_container nav .main_menu > li a::after {content: ""; display: none; position: absolute; z-index: 10; width: 100%; height: 2px; background-color: #1a2d66; }
+header .header_container nav .main_menu > li:hover > a::after{border-bottom: 2px solid var(--main-color) ; display: block;}
+header .header_container nav .main_menu .sub_menu{ display: none; width: 100%;  position: absolute; z-index: 4; border-width: 1px solid var(--gray01); padding-top: 32px;  }
+header .header_container nav .main_menu .sub_menu li {width: 100%;height: 28px; line-height: 28px; margin-bottom: 10px; font-size: 24px; }
+header .header_container nav .main_menu .sub_menu li a{height: 100%; display: block; ; color: var(--gray01); text-align: center;  font-size: 16px;}
+header .header_container nav .main_menu .sub_menu li a:hover{color: var(--main-color);}
+header .header_container nav:hover .sub_menu{ display: block; transition: all 2s ease-out;}
+header .header_container nav .sub_bg{display: none; position: absolute;top: 109px;left: 0; width: 100%; height: 200px; background-color: #fff; border-bottom: 1px solid var(--gray02); z-index: 3;}
+header .header_container nav:hover .sub_bg{display: block;}
+
+
+
+
+/* header end */
+
+/* footer start */
+
+footer{background-color: #22283c;}
+
+.footerWrap {margin: 0 auto; padding: 70px 0; }
+.footerWrap > div{display: flex; justify-content: space-between; margin-bottom: 95px;}
+.footerWrap  div > ul {display: flex; align-items: center; justify-content: space-between;}
+.footerWrap  div > ul li:nth-child(2){margin: 0 45px;}
+.footerWrap div > div {display: flex;}
+
+.footerWrap  div > ul li a{ font-size: 18px; color: #fff; }
+
+/* .footerWrap .footerAera div ul li a{font-size: 18px; color: white;} */
+
+.footerWrap div ul.socialArea{border-bottom: 1px solid #434859;margin-right: 40px; }
+.footerWrap div ul.socialArea li {margin: 0;}
+.footerWrap div ul.socialArea li a{font-size: 16px; font-weight: bold; color: #8189a1;}
+.footerWrap div ul.socialArea li:not(:first-child) a::before{content: "·"; margin:0 20px; color: #434859;}
+.footerWrap div > .contact {   display: flex ; align-items: center; background-color: #fff; padding: 15px  25px; border-radius:100px;}
+.footerWrap div > .contact img { margin-right: 20px;}
+.footerWrap div > .contact span{ font-size: 20px; font-weight: bold;}
+
+/* .footerWrap address a + p + span + small{font-size: 14px ; color: #fff;} */
+.footerWrap address{ font-size: 16px ; color: #fff;}
+.footerWrap address a{ color: #fff;}
+
+.footerWrap address a img{margin-bottom: 40px;}
+.footerWrap address p{margin-bottom: 14px; }
+.footerWrap address .footer_info{ flex-wrap: wrap; }
+.footerWrap address .footer_info > span { display: inline-block; margin-right: 28px;}
+.footerWrap address .footer_info span{font-size: 16px ; margin-bottom: 14px;}
+.footerWrap address .footer_info a{margin-bottom: 32px;}
+
+.footerWrap address .footer_info small{display: block; font-size: 14px ; color: #6f7483;}
