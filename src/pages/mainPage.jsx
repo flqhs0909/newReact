@@ -1,67 +1,38 @@
 
-//컴포넌트
-// rsc ( 화살표 함수 컴포넌트 생성) 
-
-
 import React from 'react';
 import { useState } from 'react';
 
-import MoreBtn from '../components/btnMore';
-// import ReactDOM from "react-dom";
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import '../styles/main.css'
-
-
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 // Import Swiper styles
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 
-import drimg from '../image/DR.88.png'; // 이미지를 컴포넌트로 임포트 하기 *단, 이미지가 버블릭에 있으면 안됨.
-import iconMore from '../image/icon_more.png'; 
-import step1 from '../image/main_step01.png'; 
-import step2 from '../image/main_step02.png'; 
-import step3 from '../image/main_step03.png'; 
-import result01 from '../image/main_result01.png'; 
-import result02 from '../image/main_result02.png'; 
-import company from '../image/main_company.png'; 
-import plus from '../image/icon_plus.png'; 
+// img 
+import iconMore from '../images/icon_more.png'; 
+import company from '../images/main_company.png'; 
+import plus from '../images/icon_plus.png'; 
 
 
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-// import { plus } from "src/image";
+// import { plus } from "src/images";
 
 
 import BtnMore from '../components/btnMore';
-import Header from '../components/header';
-import Footer from './footer';
-import { BrowserRouter } from 'react-router-dom';
-  
-// ReactDOM.render(<App />, document.getElementById("app"));
-// const btnCompany ={
-//     marginBottom: "100px"
-// }
 
 
 const Main = () => {
     const [notiTitle , setNotiTitle] = useState('홈쇼핑방송일정test');
 
-
-
     return (
-        
-       <div className=' main_content '>
-
-            <Header></Header>
-
-           <section className=' wdith1790'>
-                <div className='main_tBox '>
-                    <p className="">With Us for your comfort life</p>
+        <div className='mainWrap '>
+            <div className='mainArea'>
+                <div className='mainTitleBox '>
+                    <h2 >With Us for your comfort life</h2>
                     <span>우성피앤씨와 함께 삶의 질을 높이세요</span>
                 </div>
-           </section>
+            </div>
           
            <div className='wdith1790'>
                 <Swiper
@@ -81,38 +52,29 @@ const Main = () => {
                     // className="mySwiper"
                 >
                     <SwiperSlide>
-                        <div className=''>
-                            <span>DR.88</span>
-                            <img className='slide_img' src={drimg} alt=""/>
-                            
-                        </div>
+                        <img className='slide_img' src="../images/dr88.png" alt="닥터88제품이미지"/>
                         <div className='Dr_title width800'>
                             <div>
                                 <strong>닥터88</strong>
                                 <BtnMore></BtnMore>
                             </div>
-                            <b>1MHz의 저강도 초음파로 연골세포의 활성화/증식을 유도하여 “골 관절염 치료”</b>
+                            <p>1MHz의 저강도 초음파로 연골세포의 활성화/증식을 유도하여 “골 관절염 치료”</p>
                             <small> (대학병원 2곳에서의 8주간 임상시험 결과 <b> 90% 이상 치료효과</b> 확인)</small>
                         </div>
-                    
-                    
                     </SwiperSlide>
                     <SwiperSlide>
-                    
                         <div>
-                            <span>22</span>
-                            <img src={drimg} alt=""/>
+                            <span>ddd</span>
+                            <img src=''></img>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                    
-                    <div>
-                        <span>333</span>
-                        <img src={drimg} alt=""/>
-                    </div>
+                        <div>
+                            <span>333</span>
+                            {/* <img src={drimg} alt=""/> */}
+                        </div>
                     </SwiperSlide>
                 </Swiper>
-             
            </div>
         
       
@@ -121,7 +83,7 @@ const Main = () => {
             <div className='main_therapy '>
                <div className='therapy_inner'>
                     <p>골관절염? 치료됩니다!</p>
-                    <a className='btn_rink'>
+                    <a className='RinkBtn'>
                         <b>제품구매 바로가기</b>
                         <img src={iconMore} alt="" />
                     </a>
@@ -130,24 +92,26 @@ const Main = () => {
             </div>
 
             <section className='main_Principle width1200'>
-                <h3 className='main_tit'>Principle</h3>
-                <span>닥터케어 88플러스의 치료원리</span>
+                <div className='sub_title'>
+                    <h3 className='main_tit'>Principle</h3>
+                    <span>닥터케어 88플러스의 치료원리</span>
+                </div>
                 <ul>
                     <li>
                         <span>step1</span>
-                        <img src={step1} alt="" />
+                        <img src={ process.env.PUBLIC_URL+'/images/main_step01.png'} alt="" />
                         <p>닥터88플러스는 프로브를 통해<br/>1MHz의 저강도 초음파를 발생</p>
 
                     </li>
                     <li>
                         <span>step2</span>
-                        <img src={step2} alt="" />
+                        <img src={ process.env.PUBLIC_URL+'/images/main_step02.png'} alt="" />
                         <p>저강도 초음파가 관절 내<br/> 연골세포를 자극하여 활성화 및 증식</p>
 
                     </li>
                     <li>
                         <span>step3</span>
-                        <img src={step3} alt="" />
+                        <img src={ process.env.PUBLIC_URL+'/images/main_step03.png'} alt='' />
                         <p>활성화된 연골세포는 교원질을 생성하여 결과적으로 연골의 재생을 유도</p>
 
                     </li>
@@ -156,14 +120,16 @@ const Main = () => {
 
            <div className='main_result'>
                 <section className=' width1200'>
-                    <h3 className='main_tit'>result</h3>
-                    <span>임상실험 결과</span>
+                   <div className='sub_title'>
+                        <h3>result</h3>
+                        <span>임상실험 결과</span>
+                   </div>
                     <div className='result_inner'>
                         <h4>국내 2개 대학병원 임상시험 완료</h4>
                         <p>A대학병원 91.7%, C대학병원 90.9%, 골관절염 치료효과 확인</p>
                         <ul>
                             <li>
-                                <img src={result01} alt="" />
+                                <img src={ process.env.PUBLIC_URL+'/images/main_result01.png'} alt="" />
                                 <ul className='resultImg_list'>
                                     <li>혈액부피 <mark>70.8%</mark> 감소 </li>
                                     <li>단백질량 <mark>25%</mark> 감소</li>
@@ -171,7 +137,7 @@ const Main = () => {
                                 </ul>
                             </li>
                             <li>
-                                <img src={result02} alt="" />
+                                <img src={process.env.PUBLIC_URL+'/images/main_result02.png'} alt="" />
                                 <ul className='resultImg_list'>
                                     <li>혈액부피 <mark>81.8%</mark> 감소  </li>
                                     <li>단백질량 <mark>40.9%</mark> 감소</li>
@@ -191,7 +157,9 @@ const Main = () => {
            </div>
            <figure className='main_company width1200'>
                 <div>
-                    <h3 className='main_tit'>Woosung<br/> people & company </h3>
+                    <div className='sub_title'>
+                        <h3>Woosung<br/> people & company </h3>
+                    </div>
                     <BtnMore></BtnMore>
                     <p>(주)우성피앤씨는 연골세포, 심장세포, 신경세포를 연구개발하는<br/> 바이오벤처 회사입니다.</p>
                     <blockquote>
@@ -208,8 +176,10 @@ const Main = () => {
            </figure>
            <div className='main_order'>
                <section className='main_notice width1200'>
-                    <h3 className='main_tit'>notice</h3>
-                    <span>공지사항</span>
+                    <div className='sub_title'>
+                        <h3>notice</h3>
+                        <span>공지사항</span>
+                    </div>
                     <a href=""><img src={plus} alt="" /></a>
                     <ul>
                         <li>
@@ -239,8 +209,10 @@ const Main = () => {
                     </ul>
                </section>
                <section className='main_archives width1200'>
-                    <h3 className='main_tit'>archives</h3>
-                    <span>자료실</span>
+                   <div className='sub_title'>
+                        <h3 >archives</h3>
+                        <span>자료실</span>
+                   </div>
                     <a href=""><img src={plus} alt="" /></a>
                     <ul>
                         <li>
@@ -270,8 +242,6 @@ const Main = () => {
                     </ul>
                </section>
            </div>
-           <Footer></Footer>
-
        </div>
     );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import logo from '../image/logo_W.png'
-import icon_call from '../image/icon_call.png'
+import logo from '../images/logo_W.png'
+import icon_call from '../images/icon_call.png'
 
 
 const Footer = () => {
