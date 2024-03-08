@@ -7,7 +7,7 @@ import NoticeTable from '../components/noticeTable';
 import SearchBox from '../components/searchBox';
 
 import dummy from '../dummy.json';
-import { tab } from '@testing-library/user-event/dist/tab';
+// import { tab } from '@testing-library/user-event/dist/tab';
 
 
 

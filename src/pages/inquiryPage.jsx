@@ -1,8 +1,7 @@
 import React from 'react';
 import Header from '../components/header';
 import styled from 'styled-components';
-
-import BtnMore from '../components/btnMore';
+import MoreBtn from '../components/moreBtn';
 
 
 const Inquiry = ({mainTitle}) => {

@@ -9,25 +9,19 @@ header{ width: 100%; background: none; position: fixed;z-index: 999;}
 header:hover{background-color: #fff; border-bottom: 1px solid var(--gray02);}
 header.active{background-color: #fff; border-bottom: 1px solid var(--gray02);}
 header .headerContainer{height: 100%; margin-right: 130px; }
-header .headerContainer .headerInner{
-	height: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-
-	padding:0 80px;
-}
+header .headerContainer .headerInner{	height: 100%;	display: flex;	justify-content: space-between;	align-items: center;	padding:0 80px;}
 
 header .headerContainer .headerInner h1{height: 108px; cursor: pointer;}
 header .headerContainer .headerInner h1 a{ display:block; height: 100%;}
 header .headerContainer .headerInner h1 a img{ margin: 30px 0;}
 
-header .headerContainer nav{height: 108px;}
-header .headerContainer nav .mainMenu {width: 500px;	display: flex;	/* justify-content: space-between; */align-items: center;}
+header .headerContainer nav{height: 108px; display: flex; align-items: center;}
+header .headerContainer nav .mainMenu {width: 500px; display: flex;	/* justify-content: space-between; */align-items: center;}
 
 header .headerContainer nav .mainMenu > li{width: calc(100% / 4); position: relative;  }
 header .headerContainer nav .mainMenu > li > span { width: 100%; display: block; line-height: 108px; text-align: center;text-decoration: none; color:var(--main-color); font-size: 18px; font-weight: bold; cursor: pointer;}
-header .headerContainer nav .mainMenu > li span::after {content: ""; display: none; position: absolute; z-index: 10; width: 100%; height: 2px; background-color: #1a2d66; }
+header .headerContainer nav .mainMenu > li:hover > span {border-bottom: 2px solid var(--main-color) }
+/* header .headerContainer nav .mainMenu > li:hover > span::after {content: ""; display: block; position: absolute; z-index: 10; width: 100%; height: 2px; background-color: #1a2d66; } */
 header .headerContainer nav .mainMenu > li:hover > a::after{border-bottom: 2px solid var(--main-color) ; display: block;}
 header .headerContainer nav .mainMenu .subMenu{ width: 100%;  display: none; position: absolute; z-index: 4; border-width: 1px solid var(--gray01); padding-top: 32px;  }
 header .headerContainer nav .mainMenu .subMenu li {width: 100%;height: 28px; line-height: 28px; margin-bottom: 10px; font-size: 24px; }
@@ -36,47 +30,24 @@ header .headerContainer nav .mainMenu .subMenu li span:hover{color: var(--main-c
 header .headerContainer nav:hover .subMenu{ display: block; transition: all 2s ease-out;}
 header .headerContainer nav .subBg{width: 100%; height: 200px; display: none; position: absolute; top: 109px; left: 0;   background-color: #fff; border-bottom: 1px solid var(--gray02); z-index: 3;}
 header .headerContainer nav:hover .subBg{display: block;}
-/* header end */
+
+/* 모바일버전(햄버거버튼) */
+header .headerContainer .menuBtn_m {display: none; width: 45px; cursor: pointer;}
+header .headerContainer .menuBtn_m span{ width: 45px; height: 3px; display: block; background-color: var(--main-color); margin: 6px 0;}
 
 
-/*   */
+/* header end */ 
+
+
+
 /* 사이드배너 */
-.sideWrap { width: 130px; height: 100vh;  position: fixed; right: 0;  background-color: #fff;  z-index: 99; }
+.sideWrap { width: 130px; height: 100vh;  position: fixed; right: 0; z-index: 99; }
 .sideWrap ul{ width: 100%; display: flex; align-items: center; flex-direction: column;  position: absolute; bottom: 0; }
 .sideWrap > ul li{width: 100%; margin: 20px 0; display: flex;  flex-direction: column; align-items: center; cursor: pointer; }
 .sideWrap > ul li:last-child{ margin-bottom:0;}
 .sideWrap > ul li img{margin-bottom: 14px;}
 .sideWrap > ul li span{font-size: 16px; font-weight: bold; }
-
-
-
-
-/* footer start */
-footer{background-color: #22283c;}
-.footerWrap {margin: 0 auto; padding: 70px 0; }
-.footerWrap > div{display: flex; justify-content: space-between; margin-bottom: 95px;}
-.footerWrap  div > ul {display: flex; align-items: center; justify-content: space-between;}
-.footerWrap  div > ul li:nth-child(2){margin: 0 45px;}
-.footerWrap div > div {display: flex;}
-.footerWrap  div > ul li a{ font-size: 18px; color: #fff; }
-/* .footerWrap .footerAera div ul li a{font-size: 18px; color: white;} */
-.footerWrap div ul.socialArea{border-bottom: 1px solid #434859;margin-right: 40px; }
-.footerWrap div ul.socialArea li {margin: 0;}
-.footerWrap div ul.socialArea li a{font-size: 16px; font-weight: bold; color: #8189a1;}
-.footerWrap div ul.socialArea li:not(:first-child) a::before{content: "·"; margin:0 20px; color: #434859;}
-.footerWrap div > .contact {   display: flex ; align-items: center; background-color: #fff; padding: 15px  25px; border-radius:100px;}
-.footerWrap div > .contact img { margin-right: 20px;}
-.footerWrap div > .contact span{ font-size: 20px; font-weight: bold;}
-/* .footerWrap address a + p + span + small{font-size: 14px ; color: #fff;} */
-.footerWrap address{ font-size: 16px ; color: #fff;}
-.footerWrap address a{ color: #fff;}
-.footerWrap address a img{margin-bottom: 40px;}
-.footerWrap address p{margin-bottom: 14px; }
-.footerWrap address .footer_info{ flex-wrap: wrap; }
-.footerWrap address .footer_info > span { display: inline-block; margin-right: 28px;}
-.footerWrap address .footer_info span{font-size: 16px ; margin-bottom: 14px;}
-.footerWrap address .footer_info a{margin-bottom: 32px;}
-.footerWrap address .footer_info small{display: block; font-size: 14px ; color: #6f7483;}
+/*  사이드베너 끝 */
 
 .searchArea {display: flex; height: 50px; align-items: center; padding: 60px 0; box-sizing: content-box;} 
 .searchArea > select , 
@@ -85,3 +56,71 @@ footer{background-color: #22283c;}
 .searchArea > select { width: 200px; height: 100%; padding-left: 23px;}
 .searchArea > div {display: flex; flex: 1; height: 100%; margin: 0 50px 0 20px; }
 .searchArea > div > input { width: 100%; }
+
+
+
+/* footer start */
+footer{background-color: #22283c;}
+.footerWrap {width: 1200px; margin: 0 auto; padding: 70px 0; }
+.footerWrap > div{display: flex; justify-content: space-between; margin-bottom: 95px;}
+.footerWrap  div > ul {display: flex; align-items: center; justify-content: space-between;}
+.footerWrap  div > ul li:nth-child(2){margin: 0 45px;}
+.footerWrap div > div { display: flex; }
+.footerWrap  div > ul li a{ font-size: 18px; color: #fff; }
+/* .footerWrap .footerAera div ul li a{font-size: 18px; color: white;} */
+.footerWrap div ul.socialArea{border-bottom: 1px solid #434859;margin-right: 40px; }
+.footerWrap div ul.socialArea li {margin: 0;}
+.footerWrap div ul.socialArea li a{font-size: 16px; font-weight: bold; color: #8189a1;}
+.footerWrap div ul.socialArea li:not(:first-child)::before{content: "·"; margin:0 20px; color: #434859;}
+.footerWrap div div .contact {   display: flex ; align-items: center; background-color: #fff; padding: 15px 25px; border-radius:100px;}
+.footerWrap div div .contact img { margin-right: 20px;}
+.footerWrap div div .contact span{ font-size: 20px; font-weight: bold;}
+/* .footerWrap address a + p + span + small{font-size: 14px ; color: #fff;} */
+.footerWrap address{ font-size: 18px ; color: #fff;}
+.footerWrap address p{line-height: 2;}
+/* .footerWrap address a{ color: #fff;} */
+.footerWrap address a img{margin-bottom: 40px;}
+
+.footerWrap address .footerInfo {display: flex; flex-wrap: wrap; margin-bottom: 12px; }
+.footerWrap address .footerInfo p{flex: 1;}
+.footerWrap address .footerInfo > span { display: inline-block; margin-right: 28px; font-size: 18px ;line-height: 2;}
+
+.footerWrap address .footerInfo a{color: #fff; line-height: 2; font-size: 1.8rem;}
+.footerWrap address small{line-height: 2; font-size: 1.8rem ; color: #6f7483;}
+
+
+@media screen and (max-width:1200px) {
+	.sideWrap { display: none; }
+	header .headerContainer{margin-right:0; background-color: #ffffff;}
+	header .headerContainer .headerInner{padding: 0 30px;}
+	header .headerContainer .headerInner nav {display: none;}
+	header .headerContainer .headerInner nav:hover .subBg{display: none;}
+	header .headerContainer .headerInner nav .mainMenu {width: 100%; display: flex; flex-direction: column;}
+	header .headerContainer .headerInner nav .mainMenu li {width: 100%; border-bottom: 1px solid #dcdcdc;}
+	header .headerContainer nav .mainMenu > li:hover > span {border: none; }
+	header .headerContainer .headerInner nav .mainMenu li > span{display: flex;}
+	
+	header .headerContainer .headerInner nav .mainMenu li > span::before {content: "<"; display: block; position: absolute; right: 9%;  }
+	header .headerContainer .headerInner nav .mainMenu li > span::after {content: ">"; display: block;  position: absolute;  right: 10%;}
+	header .headerContainer .headerInner nav .subMenu{display: none;}
+	header .headerContainer .headerInner .menuBtn_m  {display: flex; flex-direction: column; text-align: center;}
+	header .headerContainer .headerInner .menuBtn_m.active  + nav{height: 100vh; width: 100%; display:block; position: absolute; left: 0; bottom: 0; top: 108px; background-color: #fff; }
+
+	/* footer */
+	.footerWrap {width: 100%; padding: 80px 30px;}
+	.footerWrap > div{flex-direction: column; }
+	.footerWrap > div > ul{padding: 0 60px; margin-bottom: 80px;}
+	.footerWrap  div > ul li a{ font-size: 20px; }
+	.footerWrap div > div{margin: 0 auto; flex-direction: column;}
+
+	.footerWrap div div .socialArea{margin:0 0 30px 0;}
+	.footerWrap div ul.socialArea li a{font-size: 20px;}
+	.footerWrap div div .contact{width: 340px; margin: 0 auto; justify-content: center; }
+	.footerWrap div div .contact span{font-size: 24px;}
+	.footerWrap address{font-size: 20px ; text-align: center; }
+	.footerWrap address .footerInfo{justify-content: center;}
+	.footerWrap address .footerInfo span{font-size: 20px;}
+	.footerWrap address small{font-size: 22px;}
+
+	
+}

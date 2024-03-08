@@ -1,16 +1,16 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import iconMore from '../images/icon_more.png'; 
 
-const BtnMore = () => {
+const MoreBtn = () => {
     return (
         <div>
-            <a className='RinkBtn'>
+            <Link className='moreBtn'>
                 <b>자세히보기</b>
                 <img src={iconMore} alt="" />
-            </a>
+            </Link>
         </div>
     );
 };
 
-export default BtnMore;
+export default MoreBtn;

@@ -13,13 +13,22 @@
 
 
 /* .font-family */
-h2 , .main_tit , .sub_title > h3 {font-family: PoppinsBold;}
+/* h2 , .main_tit , .sub_title > h3 {font-family: PoppinsBold;} */
 
-.wdith1790{width: 93.22916666667%;}
+/* .wdith1790{width: 93.22916666667%;} */
+
 .width1200{width: 62.5%;}
 .width800{width: 41.66666666667%;}
 .contentArea{width: 1200px; margin: 0 auto 140px;}
 
-.RinkBtn{display: flex;width: fit-content;  align-items: center; background-color: var(--main-color);  border-radius: 100px; border: none; padding: 16px 25px; }
-.RinkBtn b{ font-size: 14px; color: #fff; margin-right: 32px; }
+.moreBtn{display: flex;width: fit-content;  align-items: center; background-color: var(--main-color);  border-radius: 100px; border: none; padding: 16px 25px; }
+.moreBtn b{ font-size: 14px; color: #fff; margin-right: 32px; }
 .searchBtn {background-color: var(--main-color); border: none; }
+
+@media screen and 
+(max-width:1200px) {
+	.wdith1790{width: unset; padding: 0 30px;}
+	.moreBtn{height: 60px;  border: none; padding: 16px 25px; }
+	.moreBtn b{ font-size: 20px; }
+
+}

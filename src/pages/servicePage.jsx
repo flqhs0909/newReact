@@ -1,8 +1,6 @@
 import React from 'react';
-import Header from '../components/header';
-import styled from 'styled-components';
 
-import BtnMore from '../components/btnMore';
+import MoreBtn from '../components/moreBtn';
 
 
 const ServicePage = (props) => {
@@ -16,8 +14,10 @@ const ServicePage = (props) => {
             <div className='serviceArea'>
                <div className='titleBox'>
                     {/* <h2>고객센터</h2> */}
-                    <h2>{props.mainTitle}</h2>
-                    <p>(주)우성피앤씨는 고객과의 원활한 소통을 위해 항상 노력합니다.</p>
+                    <div className='titleInner'>
+                        <h2>{props.mainTitle}</h2>
+                        <p>㈜우성피앤씨는 고객과의 원활한 소통을 위해<br/> 항상 노력합니다.</p>
+                    </div>
                </div>
             </div>
            <section className='subNavArea'>
@@ -53,19 +53,19 @@ const ServicePage = (props) => {
                         <img src="../images/bannerImg_01.png" alt="제품사용" />
                         <strong>제품사용</strong>
                         <p>제품사용에 관한 설명서와 <br/> 동영상을 확인하실 수 있습니다.</p>
-                        <BtnMore></BtnMore>
+                        <MoreBtn></MoreBtn>
                     </li>
                     <li>
                         <img src="../images/bannerImg_02.png" alt="문의사항" />
                         <strong>문의사항</strong>
                         <p>제품에 대해 궁금하신 사항을<br/> 남겨주세요.</p>
-                        <BtnMore></BtnMore>
+                        <MoreBtn></MoreBtn>
                     </li>
                     <li>
                         <img src="../images/bannerImg_03.png" alt="자주 묻는 질문" />
                         <strong>자주 묻는 질문</strong>
                         <p>고객님들께서 자주 궁금해하시는<br/> 내용들을 모아두었습니다.</p>
-                        <BtnMore></BtnMore>
+                        <MoreBtn></MoreBtn>
                     </li>
                 </ul>
              

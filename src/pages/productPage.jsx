@@ -3,7 +3,7 @@ import React from 'react';
 // import styled from 'styled-components';
 
 // import BtnMore from '../components/btnMore';
-import ProductTable from '../components/ProductTable';
+import ProductTable from '../components/productTable';
 import SearchBox from '../components/searchBox';
 
 

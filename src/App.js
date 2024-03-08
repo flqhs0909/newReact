@@ -2,11 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 // css//
-import './styles/reset.css'
-import './styles/guide.css'
-import './styles/global.css'
-import './styles/main.css'
-import './styles/fonts.css'
+import './styles/import.css'
 
 // page//
 import Header from './components/header';

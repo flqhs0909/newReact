@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState , useEffect } from 'react';
 
-import ProductUseList from './ProductUseList';
+import ProductUseList from './productUseList';
 const ProductTable = () => {
     return (
         <table >
@@ -16,25 +16,7 @@ const ProductTable = () => {
                 </tr>
             </thead>
             {list.map((list) => <ProductUseList listDate={list} ></ProductUseList>) }
-            
-            {/* <tbody>
-                <tr>
-                    <td>{list.num}</td> 
-                    <td>{list.title}</td>
-                    <td>{list.writer}</td>
-                    <td>{list.date}</td>
-                    <td>{list.recommend}</td>
-                    <td>{list.views}</td>
-                </tr>
-                <tr>
-                    <td>67</td>
-                    <td>골관절염자가진단표</td>
-                    <td>작성자</td>
-                    <td>2021.04.16</td>
-                    <td>0</td>
-                    <td>15</td>
-                </tr>
-            </tbody> */}
+      
         </table>
         
         

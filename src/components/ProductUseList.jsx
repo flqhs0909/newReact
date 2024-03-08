@@ -1,9 +1,6 @@
 import React from 'react';
 
 const ProductUse = ({listDate}) => {
-
-
-    console.log("list" , listDate);
     
     return (
         <tbody>
