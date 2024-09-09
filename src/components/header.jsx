@@ -11,11 +11,11 @@ import dummy from '../dummy.json';
 // import Main from '../pages/main';
  
 
-function Header() {
+const Header =() => {
     let Navigate = useNavigate();
     const [commTitle , setCommTitle] = useState([]);
     const [scrolling , setScrolling] = useState(false);
-
+    const [menu ,setMenu]  =useState(0);
     // const header = document.querySelector("header");
 
     useEffect(()=>{
@@ -23,10 +23,22 @@ function Header() {
         setScrolling(window.scrollY > 0) 
     }) 
     },[])
-  
+    
+    
+    const mobileMenu =(e)=> { 
+        e.currentTarget.classList.toggle('active')
+    }                                                    
+    const dep1 =(e) =>{ 
+        e.currentTarget.classList.toggle('active')
+       
 
+    }
+
+    const [clickTab , setClickTab] =useState([0]);
+    
     return (
-
+ 
+    
      
         <header className ={  scrolling === true ? "active" : null}>
             <div className='headerContainer'>
@@ -36,15 +48,16 @@ function Header() {
                             <img src="/images/logo.png" alt="logo" />
                         </Link>
                     </h1> 
-                    <div className='menuBtn_m'   >
+                    <div className='menuBtn_m'  onClick={mobileMenu}  >
                         <span></span>
                         <span></span>
                     </div>
                     <nav>
                         <div className='subBg'></div>
-                        <ul className='mainMenu'>
-                            <li>
-                                <span >제품소개</span> 
+                        <ul className='mainMenu'  >
+                            <li className='menuItem' >
+                                <span onClick={dep1} >제품소개 </span> 
+                                
                                 <ul className='subMenu'>
                                     {/* <li><Link to='../pages/servicePage'>닥터88</Link></li> */}
                                     <li>< span >닥터88</span></li>
@@ -53,7 +66,8 @@ function Header() {
                                     <li><span >전용젤</span></li>
                                 </ul>
                             </li>
-                            <li><span >초음파 치료</span>
+                            <li className='menuItem'>
+                                <span onClick={dep1} >초음파 치료</span>
                                 <ul  className='subMenu'>
                                     <li><span>치료원리</span></li>
                                     <li><span>관절염이란</span></li>
@@ -61,26 +75,35 @@ function Header() {
                             
                                 </ul>
                             </li>
-                            <li><span onClick={()=> {Navigate('/communityPage')}} >커뮤니티</span>
-                                <ul className='subMenu'>
+                            <li className='menuItem'onClick={dep1}>
+                                <span onClick={()=> {Navigate('/communityPage')} 
+                             } >커뮤니티</span>
+                                {/* <ul className='subMenu'>
                                     { dummy.communityTitle.map(communityTitle =>
                                     <li key={communityTitle.id}
                                         onClick={()=> setCommTitle(communityTitle.tab)}
-                                
-                                        
                                     >
                                         <span >{communityTitle.tab}</span>
                                     </li>
                                     )}
-                                </ul>
-
-                                {/* <ul  className='sub_menu'>
-                                    <li><span onClick={()=> {Navigate('/communityPage')}} >공지사항</span></li>
-                                    <li><span  onClick={()=> {Navigate('/communityPage')}}>컨텐츠</span></li> 
-                                    <li><span  onClick={()=> {Navigate('/communityPage')}}>미디어</span></li> 
                                 </ul> */}
+
+                                <ul  className='subMenu'>
+                                  {dummy.communityTitle.map(communityTitle => 
+                                 
+                                    <li key={communityTitle.id}
+                                        onClick={()=>console.log(setClickTab(communityTitle.id[0])) } 
+                                    ><span>{communityTitle.tab}</span></li> 
+                                )}
+
+                                    {/* <li><span onClick={()=> {Navigate('/communityPage')}} >공지사항</span></li>
+                                    <li><span  onClick={()=> {Navigate('/communityPage')}}>미디어</span></li>  */}
+                                  
+                                        
+                                </ul>
                             </li>
-                            <li><span  onClick={()=>{Navigate('/ServicePage')} } >고객센터</span>
+                            <li className='menuItem' onClick={dep1}>
+                                <span  onClick={()=>{Navigate('/ServicePage')} } >고객센터</span>
                                 <ul className='subMenu'>
                                     <li><span  onClick={()=>{Navigate('/Product')}}>제품사용</span></li>
                                     <li><span onClick={()=>{Navigate('/Inquiry')}}>문의사항</span></li> 
@@ -101,10 +124,11 @@ function Header() {
             </div>
         </header>
         
-
-     
+        
+       
     );
 }
+
 
 
  

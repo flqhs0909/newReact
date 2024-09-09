@@ -29,7 +29,7 @@ const Main = () => {
             <div className='mainArea'>
                 <div className='mainTitleBox '>
                    <div >
-                        <h2 >With Us for your comfort life</h2>
+                        <h2 >With Us <br/> for your<br/> comfort <br/> life</h2>
                         <span>우성피앤씨와 함께 삶의 질을 높이세요</span>
                    </div>
                 </div>
@@ -91,7 +91,7 @@ const Main = () => {
                </div>
             </div>
 
-            <section className='main_Principle'>
+            <section className='width1200 PrincipleAera'>
                 <div className='subTitle'>
                     <h3 className='main_tit'>Principle</h3>
                     <span>닥터케어 88플러스의 치료원리</span>
@@ -118,8 +118,8 @@ const Main = () => {
                 </ul>
             </section>
 
-           <div className='resultAera'>
-                <section >
+           <div className=' resultAera'>
+                <section className='width1200'>
                    <div className='subTitle'>
                         <h3>result</h3>
                         <span>임상실험 결과</span>
@@ -155,7 +155,7 @@ const Main = () => {
 
                 </section>
            </div>
-           <figure className='companyAera'>
+           <figure className='width1200 companyAera'>
                 <div>
                     <div className='subTitle'>
                         <h3>Woosung<br/> people & company </h3>
@@ -174,7 +174,7 @@ const Main = () => {
                 </div>
                 <img src={company} alt="companyImg" />
            </figure>
-           <section className='postAera'>
+           <section className='width1200 postAera'>
                <div className='postInner notice '>
                    <div >
                         <div className='subTitle'>

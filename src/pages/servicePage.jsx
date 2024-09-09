@@ -16,17 +16,16 @@ const ServicePage = (props) => {
                     {/* <h2>고객센터</h2> */}
                     <div className='titleInner'>
                         <h2>{props.mainTitle}</h2>
-                        <p>㈜우성피앤씨는 고객과의 원활한 소통을 위해<br/> 항상 노력합니다.</p>
+                        <p>㈜우성피앤씨는 고객과의 원활한 소통을 위해 항상 노력합니다.</p>
                     </div>
                </div>
-            </div>
-           <section className='subNavArea'>
                 <div className='navTitle'>
                     <span>홈</span>
                     <span>고객센터</span>
                 </div>
-            </section>
-            <div className='CScenterArea'>
+            </div>
+       
+            <div className='width1200 CScenterArea'>
                 <div className='serviceCS'>
                     <p>궁금하신 사항은 언제든지 문의하세요.</p>
                     <b>고객의 만족을 위해 최선을 다하겠습니다.</b>
@@ -48,7 +47,7 @@ const ServicePage = (props) => {
                         </li>
                     </ul>
                 </div>
-                <ul className='service_banner'>
+                <ul className='serviceBanner'>
                     <li>
                         <img src="../images/bannerImg_01.png" alt="제품사용" />
                         <strong>제품사용</strong>

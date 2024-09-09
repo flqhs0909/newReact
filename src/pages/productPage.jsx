@@ -17,19 +17,24 @@ const Product = ({mainTitle}) => {
           <div className='serviceArea'>
                <div className='titleBox'>
                     {/* <h2>고객센터</h2> */}
-                    <h2>{mainTitle}</h2>
-                    <p>고객님의 제품 사용에 대한 이해를 돕기 위한 자료들입니다.</p>
+                   <div className='titleInner'>
+                        <h2>{mainTitle}</h2>
+                        <p>고객님의 제품 사용에 대한 이해를 돕기 위한 자료들입니다.</p>
+                   </div>
                </div>
-            </div>
-            <section className='subNavArea'>
                 <div className='navTitle'>
                     <span>홈</span>
                     <span>고객센터</span>
                     <span>제품사용</span>
                 </div>
-           </section>
-            <div className='contentArea productArea'>
-                <iframe src="" frameborder="0"></iframe>
+            </div>
+      
+            <div className=' width1200 productArea'>
+                <div className='videoFrame'>
+                    <iframe src="https://www.youtube.com/embed/ua1TQJmzOrE?si=PelSUkoCU75RbTzm" 
+                   
+                     ></iframe>
+                </div>
                 <div className='noteBox'>
                     <img src="../images/icon_note.png" alt="공지아이콘" />
                     <p>처음 구입하신 경우 사용설명서를 <strong>1회이상 꼭 읽어보고 사용하십시오.</strong></p>

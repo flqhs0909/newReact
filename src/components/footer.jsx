@@ -7,7 +7,7 @@ import icon_call from '../images/icon_call.png'
 const Footer = () => {
     return (
         <footer >
-            <div className='footerWrap'>
+            <div className='width1200 footerWrap'>
                 <div >
                     <ul >
                         <li> <a href="">이용약관</a></li>

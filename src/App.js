@@ -23,7 +23,7 @@ function App() {
 
 
     <div className="App">
-        <Header></Header>
+        <Header ></Header>
         <SideBenner></SideBenner>
         <Routes>
           <Route path='/' element={<Main />}></Route>

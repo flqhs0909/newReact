@@ -33,12 +33,12 @@ const NoticeTable = ({ clickTab }) => {
             <tbody>
                 {tabList.map( noticeData =>(
                     <tr >
-                        <td>{noticeData.num}</td>
-                        <td className='listDateTitle'>{noticeData.title}</td>
-                        <td>{noticeData.writer}</td>
-                        <td>{noticeData.date}</td>
-                        <td>{noticeData.recommend}</td>
-                        <td>{noticeData.views}</td>
+                        <td date-label="번호" className='listNum'>{noticeData.num}</td>
+                        <td date-label="제목" className='listDateTitle'>{noticeData.title}</td>
+                        <td date-label="작성자" className='listwriter'>{noticeData.writer}</td>
+                        <td date-label="작성일" className='listDate'>{noticeData.date}</td>
+                        <td date-label="추천" className='listRecommend'>{noticeData.recommend}</td>
+                        <td date-label="조회" className='listViews'>{noticeData.views}</td>
                     </tr> 
                      ))}
                 </tbody>

@@ -5,6 +5,13 @@ import ProductUseList from './productUseList';
 const ProductTable = () => {
     return (
         <table >
+            {/* <colgroup>
+                <col width="5%"/>
+                <col width="60%"/>
+                <col width="10%"/>
+                <col width="10%"/>
+                <col width="10%"/>
+            </colgroup> */}
             <thead >
                 <tr>
                     <td>번호</td>

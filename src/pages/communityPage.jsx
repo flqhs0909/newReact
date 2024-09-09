@@ -12,7 +12,7 @@ import dummy from '../dummy.json';
 
 
 const CommunityPage = ({commTitle}) => {
-    const [clickTab , setClickTab] =useState("공지사항");
+    const [clickTab , setClickTab] =useState('공지사항');
 
 
     return (
@@ -21,18 +21,20 @@ const CommunityPage = ({commTitle}) => {
             <div className='serviceArea'>
                <div className='titleBox'>
                     {/* <h2>고객센터</h2> */}
-                    <h2>{clickTab}</h2>
-                    <p>(주)우성피앤씨는 고객과의 원활한 소통을 위해 항상 노력합니다.</p>
+                    <div className='titleInner'>
+                        <h2>{clickTab}</h2>
+                        <p>(주)우성피앤씨는 고객과의 원활한 소통을 위해 항상 노력합니다.</p>
+                    </div>
                </div>
-            </div>
-           <section className='subNavArea'>
                 <div className='navTitle'>
                     <span>홈</span>
                     <span>커뮤니티</span>
                 </div>
-            </section>
+            </div>
+         
+       
 
-            <section className='commSection contentArea'>
+            <section className='commSectionArea  width1200'>
                 <ul>
                     { dummy.communityTitle.map(communityTitle =>
                     <li key={communityTitle.id}

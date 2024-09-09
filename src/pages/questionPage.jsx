@@ -1,32 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 
 const Question = ({mainTitle}) => {
     
     // const mainBg = {backgroundImg: "url('./../public/images/main02.png')"}
     const [ toggle , setToggle] = useState(false);
-    const toggleItem =(index) => {
-       setToggle(toggle => !toggle);
-      
+    
+
+    const dropDown = (e) => {
+       e.currentTarget.classList.toggle('active')
     }
+
+
+
+  
+
+
+   
+    
+
 
     return (
         <div className='serviceWrap'>
           <div className='serviceArea'>
                <div className='titleBox'>
                     {/* <h2>고객센터</h2> */}
-                    <h2>{mainTitle}</h2>
-                    <p>고객님들께서 자주 질문하시는 내용들을<br/> 보기 쉽게 정리 했습니다</p>
+                   <div className='titleInner'>
+                        <h2>{mainTitle}</h2>
+                        <p>고객님들께서 자주 질문하시는 내용들을<br/> 보기 쉽게 정리 했습니다</p>
+                   </div>
                </div>
-            </div>
-            <section className='subNavArea'>
                 <div className='navTitle'>
                     <span>홈</span>
                     <span>고객센터</span>
                     <span>자주묻는 질문</span>
                 </div>
-           </section>
-            <div className='contentArea questionArea'>
+            </div>
+          
+            <div className='width1200 questionArea'>
                 <div className='searchBox'>
                     <input type="text" placeholder = '검색어를 입력하세요'  /> 
                     <button className='searchBtn'><img src="../images/icon_search.png" alt="돋보기" /></button>
@@ -35,9 +46,14 @@ const Question = ({mainTitle}) => {
                     <ul>
                         <li>
                             <div
-                                onClick={ toggleItem}
-                                className={toggle === false ? '' : 'active'  }>
-                                <p>닥터88을 만든회사는 어떤 회사인가요?</p>
+                           
+                                onClick={dropDown}
+                                // className={toggle ? 'active ': ""}
+                                // onClick={handleClick}.
+                                
+                                // className = { toggle === false ? '' : 'active'  }  
+                                >
+                                <p>11닥터88을 만든회사는 어떤 회사인가요?</p>
                                 <img src="../images/icon_open.png" alt="열기버튼" />
                                 <img src="../images/icon_close.png" alt="닫기버튼" />
                             </div>
@@ -55,9 +71,11 @@ const Question = ({mainTitle}) => {
                         </li>
                         <li>
                             <div
-                                onClick={ toggleItem}
-                                className={toggle === false ? '' : 'active'  }>
-                                <p>닥터88을 만든회사는 어떤 회사인가요?</p>
+                               
+                               onClick={dropDown}
+                                // className={toggle === false ? '' : 'active'  }
+                                >
+                                <p>22닥터88을 만든회사는 어떤 회사인가요?</p>
                                 <img src="../images/icon_open.png" alt="열기버튼" />
                                 <img src="../images/icon_close.png" alt="닫기버튼" />
                             </div>
