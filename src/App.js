@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
-
+import { useState } from 'react';
 // css//
 import './styles/import.css'
+
 
 // page//
 import Header from './components/header';
@@ -17,13 +17,17 @@ import CommunityPage from './pages/communityPage';
 
 
 
+
 function App() {
+  const [clickTab ,setClickTab]  =useState('공지사항');
+
 
   return (
 
 
     <div className="App">
-        <Header ></Header>
+        
+        <Header></Header>
         <SideBenner></SideBenner>
         <Routes>
           <Route path='/' element={<Main />}></Route>

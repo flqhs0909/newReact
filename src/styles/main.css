@@ -75,7 +75,7 @@
 .postAera .postInner.notice{border-bottom: 2px solid #000; margin-bottom: 80px; }
 .postAera .postInner > div{display: flex; justify-content: space-between; margin-bottom: 60px;}
 .postAera .postInner > div div.subTitle{margin: 0; }
-.postAera .postInner > div button{display: inline; border: none; background: none}
+.postAera .postInner > div button{display: inline; border: none;  background: none; cursor: pointer;}
 .postAera > div ul{display: flex; justify-content: space-between; padding-bottom: 80px; margin-right: 50px;}
 .postAera > div ul li {width: calc(100% / 4 - 100px ); }
 .postAera > div ul li a > p{ margin-bottom: 16px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;  color: #000;  font-size: 20px;  font-weight: 300; letter-spacing: -3px;}

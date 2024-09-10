@@ -9,9 +9,10 @@ const NoticeTable = ({ clickTab }) => {
     // const [noticeData , setNoticeData ] = useState([]);
     // const [tabData , setTabData ] = useState({clickTab});
     const [tabList , setTabList] = useState([]);
-    
+ 
     
     useEffect(()=>{
+    
         setTabList(dummmy.noticeData.filter(tab=>(tab.tab === clickTab)))
         
     },[clickTab])

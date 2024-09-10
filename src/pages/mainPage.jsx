@@ -1,8 +1,9 @@
 
 import React from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+
 // Import Swiper styles
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -23,7 +24,11 @@ import MoreBtn from '../components/moreBtn';
 
 const Main = () => {
     const [notiTitle , setNotiTitle] = useState('홈쇼핑방송일정test');
-
+    const navigate =useNavigate();
+    function notiMore() {  
+        navigate('/communityPage'); 
+         
+    }
     return (
         <div className='mainWrap '>
             <div className='mainArea'>
@@ -181,7 +186,7 @@ const Main = () => {
                             <h3>notice</h3>
                             <span>공지사항</span>
                         </div>
-                        <button><img src={plus} alt="더보기버튼" /></button>
+                        <button onClick={notiMore}><img src={plus} alt="더보기버튼" /></button>
                    </div>
                     <ul>
                         <li>
@@ -247,7 +252,9 @@ const Main = () => {
                </div>
            </section>
        </div>
-    );
+
+);
+  
 };
 
 export default Main;

@@ -6,17 +6,17 @@ import { Link, useNavigate , useLocation} from 'react-router-dom';
 import ServicePage from '../pages/servicePage'
 
 import dummy from '../dummy.json';
+import CommunityPage from '../pages/communityPage';
 
 
-// import Main from '../pages/main';
  
 
-const Header =() => {
+const Header =(props) => {
     let Navigate = useNavigate();
     const [commTitle , setCommTitle] = useState([]);
     const [scrolling , setScrolling] = useState(false);
-    const [menu ,setMenu]  =useState(0);
-    // const header = document.querySelector("header");
+    const [clickTab ,setClickTab]  =useState(props.clickTab);
+   
 
     useEffect(()=>{
     window.addEventListener('scroll', function(){
@@ -33,9 +33,11 @@ const Header =() => {
        
 
     }
-
-    const [clickTab , setClickTab] =useState([0]);
+    const navCommPage =()=>{
+        Navigate('/communityPage'); 
+    }
     
+        
     return (
  
     
@@ -75,9 +77,8 @@ const Header =() => {
                             
                                 </ul>
                             </li>
-                            <li className='menuItem'onClick={dep1}>
-                                <span onClick={()=> {Navigate('/communityPage')} 
-                             } >커뮤니티</span>
+                            <li className='menuItem'>
+                                <span onClick={navCommPage} >커뮤니티</span>
                                 {/* <ul className='subMenu'>
                                     { dummy.communityTitle.map(communityTitle =>
                                     <li key={communityTitle.id}
@@ -91,8 +92,9 @@ const Header =() => {
                                 <ul  className='subMenu'>
                                   {dummy.communityTitle.map(communityTitle => 
                                  
-                                    <li key={communityTitle.id}
-                                        onClick={()=>console.log(setClickTab(communityTitle.id[0])) } 
+                                    <li key={communityTitle.id} 
+                                         clickTab={props.clickTab}
+                                        onClick={()=>setClickTab(communityTitle.tab) } 
                                     ><span>{communityTitle.tab}</span></li> 
                                 )}
 

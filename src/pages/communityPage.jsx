@@ -11,7 +11,7 @@ import dummy from '../dummy.json';
 
 
 
-const CommunityPage = ({commTitle}) => {
+const CommunityPage = () => {
     const [clickTab , setClickTab] =useState('공지사항');
 
 
@@ -27,8 +27,10 @@ const CommunityPage = ({commTitle}) => {
                     </div>
                </div>
                 <div className='navTitle'>
+                    
                     <span>홈</span>
                     <span>커뮤니티</span>
+                    <span >{clickTab}</span>
                 </div>
             </div>
          
